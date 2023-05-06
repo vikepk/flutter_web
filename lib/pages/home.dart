@@ -2,6 +2,8 @@ import "package:flutter/material.dart";
 import "package:static_web/utils/constants.dart";
 import 'package:static_web/widgets/navbar.dart';
 
+import "containers/container1.dart";
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -20,6 +22,7 @@ class _HomeState extends State<Home> {
           child: Container(
         child: Column(children: [
           NavBar(),
+          Container1(),
         ]),
       )),
     );

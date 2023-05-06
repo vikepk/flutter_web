@@ -4,6 +4,8 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:static_web/utils/colors.dart';
 import 'package:static_web/utils/styles.dart';
 
+import '../utils/constants.dart';
+
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
 
@@ -81,8 +83,8 @@ class _NavBarState extends State<NavBar> {
   Widget navLogo() {
     return Container(
       width: 110,
-      decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/logo.png'))),
+      decoration:
+          BoxDecoration(image: DecorationImage(image: AssetImage(logo))),
     );
   }
 }
