@@ -20,6 +20,7 @@ class _Container1State extends State<Container1> {
     );
   }
 
+//Mobile
   Widget MobileContainer1() {
     return Container(
       //margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
@@ -79,6 +80,7 @@ class _Container1State extends State<Container1> {
     );
   }
 
+//Desktop
   Widget DesktopContainer1() {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
