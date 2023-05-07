@@ -84,88 +84,89 @@ class _Container6State extends State<Container6> {
   Widget DesktopContainer6() {
     return Container(
       color: Colors.white,
-      margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
-      child: Column(
-        children: [
-          Row(
+      padding: EdgeInsets.only(top: 100),
+      child: Container(
+        height: 600,
+        color: Colors.white,
+        // padding: EdgeInsets.only(right: 20, left: 20, top: 20),
+        margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
+        child: Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                  child: Container(
-                child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "The Product we\n work with.",
-                        style: TextStyle(
-                            fontSize: w! / 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                            height: 1.2),
-                      ),
-                      SizedBox(
-                        width: 150,
-                      ),
-                      Text(
-                        "Tellus lacus morbi sagittis lacus in.\n Amet nisl at mauris enim aumsan \nnisi, tincidunt vel. Enim ipsum, at\n quis ullamcorper eget ut",
-                        style: TextStyle(fontSize: 20, color: Colors.grey[400]),
-                      ),
-                    ]),
-              )),
-            ],
-          ),
-          SizedBox(
-            height: 80,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                          blurRadius: 2.0,
-                          spreadRadius: 7,
-                          offset: Offset(1, 1),
-                          color: Colors.grey.withOpacity(0.2)),
-                    ]),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      CircleAvatar(
-                        backgroundImage: AssetImage(illustration1),
-                      ),
-                      Text(
-                        "Cross platform",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      Text(
-                        "Elit esse cillum dolore eu fugiat nulla \npariatur",
-                        textAlign: TextAlign.center,
-                      )
-                    ]),
+              Row(
+                children: [
+                  Expanded(
+                      child: Container(
+                    child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "The Product we\n work with.",
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                                fontSize: w! / 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                height: 1.2),
+                          ),
+                          SizedBox(
+                            width: 150,
+                          ),
+                          Text(
+                            "Tellus lacus morbi sagittis lacus in.\n Amet nisl at mauris enim aumsan \nnisi, tincidunt vel. Enim ipsum, at\n quis ullamcorper eget ut",
+                            style: TextStyle(
+                                fontSize: 20, color: Colors.grey[400]),
+                          ),
+                        ]),
+                  )),
+                ],
               ),
-              SizedBox(width: 30),
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(color: AppColors.primary),
-                child: Text("Prem"),
+              SizedBox(
+                height: 80,
               ),
-              SizedBox(width: 30),
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(color: AppColors.primary),
-                child: Text("Prem"),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  WorkBox("Cross platform",
+                      "Elit esse cillum dolore eu fugiat nulla pariatur"),
+                  WorkBox("Cloud server",
+                      "Elit esse cillum dolore eu fugiat nulla pariatur"),
+                  WorkBox("Pure Javascript",
+                      "Elit esse cillum dolore eu fugiat nulla pariatur")
+                ],
               ),
             ],
           ),
-        ],
+        ),
       ),
+    );
+  }
+
+  Widget WorkBox(String Head, String content) {
+    return Container(
+      height: 200,
+      width: 200,
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(30),
+          boxShadow: [
+            BoxShadow(
+                offset: Offset(1, 1), color: Colors.grey.withOpacity(0.2)),
+          ]),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        CircleAvatar(
+          backgroundImage: AssetImage(illustration1),
+        ),
+        Text(
+          Head,
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+        Text(
+          content,
+          textAlign: TextAlign.center,
+        )
+      ]),
     );
   }
 }
