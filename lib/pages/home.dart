@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:static_web/pages/containers/container2.dart";
+import "package:static_web/pages/containers/container6.dart";
 import "package:static_web/utils/constants.dart";
 import 'package:static_web/widgets/navbar.dart';
 
@@ -31,6 +32,7 @@ class _HomeState extends State<Home> {
           Container3(),
           Container4(),
           Container5(),
+          Container6(),
         ]),
       )),
     );
