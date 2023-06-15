@@ -83,10 +83,10 @@ class _Container6State extends State<Container6> {
 //Desktop
   Widget DesktopContainer6() {
     return Container(
+      height: 600,
       color: Colors.white,
-      padding: EdgeInsets.only(top: 100),
+      padding: EdgeInsets.only(top: 80),
       child: Container(
-        height: 600,
         color: Colors.white,
         // padding: EdgeInsets.only(right: 20, left: 20, top: 20),
         margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
